@@ -1,0 +1,1 @@
+A currently console only way of playing Rock, Paper, Scissors, built through the Odin Project curriculum. Goal is to be able to play a 5 game match vs the computer of RPS, coded entirely with JavaScript.
