@@ -10,6 +10,7 @@ function getComputerChoice() {
 
 // player selection
 
+
 // play a round of rps
 function playRound(playerSelection, computerSelection) {
     // playerSelection = "rock"
@@ -21,11 +22,27 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection == "rock" && computerSelection == "scissors") {
         playerScore =+ 1
         console.log("Rock smashes paper, you win!")
+    } 
+    // playerSelection = "paper"
+    else if (playerSelection == "paper" && computerSelection == "rock") {
+        playerScore =+ 1
+        console.log("Paper covers rock, you win!")
+    } else if (playerSelection == "paper" && computerSelection == "paper"){
+        console.log("You both picked paper, try again!")
+    } else if (playerSelection == "paper" && computerSelection == "scissors") {
+        computerScore =+ 1
+        console.log("Scissors cuts paper, you lose!")
+    }
+    // playerSelection = "scissors"
+    else if (playerSelection == "scissors" && computerSelection == "rock") {
+        computerScore =+ 1
+        console.log("Rock smashes scissors, you lose!")
+    } else if (playerSelection == "scissors" && computerSelection == "paper"){
+        playerScore =+ 1
+        console.log("Scissors cuts paper, you win!")
+    } else if (playerSelection == "paper" && computerSelection == "scissors") {
+        console.log("You both picked scissors, try again!")
     }
 }
 
-const playerSelection = "rock"
-const computerSelection = getComputerChoice()
-
-playRound(playerSelection, computerSelection)
 // play a full match
