@@ -21,7 +21,7 @@ function playRound(playerSelection, computerSelection) {
         console.log("Paper covers rock, you lose!")
     } else if (playerSelection == "rock" && computerSelection == "scissors") {
         playerScore =+ 1
-        console.log("Rock smashes paper, you win!")
+        console.log("Rock smashes scissors, you win!")
     } 
     // playerSelection = "paper"
     else if (playerSelection == "paper" && computerSelection == "rock") {
