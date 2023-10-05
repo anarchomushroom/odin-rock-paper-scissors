@@ -8,8 +8,10 @@ function getComputerChoice() {
     return options[Math.floor(Math.random() * options.length)]
 }
 
-// player selection
+let computerSelection = getComputerChoice()
 
+// player selection
+let playerSelection = prompt("Choose rock, paper, or scissors.").toLowerCase()
 
 // play a round of rps
 function playRound(playerSelection, computerSelection) {
@@ -45,4 +47,5 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+playRound(playerSelection, computerSelection)
 // play a full match
