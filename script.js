@@ -45,5 +45,11 @@ function playRound(computerSelection) {
     }
 }
 
-playRound(computerSelection)
 // play a full match
+function game() {
+    while (playerScore < 5 && computerScore < 5) {
+        playRound(computerSelection)
+    }
+}
+
+game()
