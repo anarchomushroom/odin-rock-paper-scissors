@@ -10,11 +10,9 @@ function getComputerChoice() {
 
 let computerSelection = getComputerChoice()
 
-// player selection
-let playerSelection = prompt("Choose rock, paper, or scissors.").toLowerCase()
-
 // play a round of rps
-function playRound(playerSelection, computerSelection) {
+function playRound(computerSelection) {
+    let playerSelection = prompt("Choose rock, paper, or scissors.").toLowerCase();
     // playerSelection = "rock"
     if (playerSelection == "rock" && computerSelection == "rock") {
         console.log("You both picked rock, try again!")
@@ -47,5 +45,5 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-playRound(playerSelection, computerSelection)
+playRound(computerSelection)
 // play a full match
