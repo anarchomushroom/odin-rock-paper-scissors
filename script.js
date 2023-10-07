@@ -54,8 +54,9 @@ function game() {
         if (playerScore == 5) {
             console.log("You have beaten the computer!")
         } else if (computerScore == 5) {
-            console.log("You lost to the computer. Yikes")   
+            console.log("You lost to the computer. Yikes")
         }
+        break;
     }
 }
 
