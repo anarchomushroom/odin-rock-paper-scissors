@@ -8,8 +8,6 @@ function getComputerChoice() {
     return options[Math.floor(Math.random() * options.length)]
 }
 
-let computerSelection = getComputerChoice()
-
 // play a round of rps
 function playRound(computerSelection) {
     let playerSelection = prompt("Choose rock, paper, or scissors.").toLowerCase();
@@ -48,7 +46,16 @@ function playRound(computerSelection) {
 // play a full match
 function game() {
     while (playerScore < 5 && computerScore < 5) {
+        let computerSelection = getComputerChoice();
         playRound(computerSelection)
+    }
+
+    while (playerScore == 5 || computerScore == 5) {
+        if (playerScore == 5) {
+            console.log("You have beaten the computer!")
+        } else if (computerScore == 5) {
+            console.log("You lost to the computer. Yikes")   
+        }
     }
 }
 
