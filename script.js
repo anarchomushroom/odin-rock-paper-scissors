@@ -40,7 +40,7 @@ function playRound(computerSelection) {
     } else if (playerSelection == "scissors" && computerSelection == "paper"){
         playerScore += 1
         console.log("Scissors cuts paper, you win!")
-    } else if (playerSelection == "paper" && computerSelection == "scissors") {
+    } else if (playerSelection == "scissors" && computerSelection == "scissors") {
         console.log("You both picked scissors, try again!")
     }
 }
