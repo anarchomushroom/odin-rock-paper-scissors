@@ -44,20 +44,38 @@ function playRound(computerSelection) {
 }
 
 // play a full match
-function game() {
-    while (playerScore < 5 && computerScore < 5) {
-        let computerSelection = getComputerChoice();
-        playRound(computerSelection)
-    }
+// function game() {
+//     while (playerScore < 5 && computerScore < 5) {
+//         let computerSelection = getComputerChoice();
+//         playRound(computerSelection)
+//     }
 
-    while (playerScore == 5 || computerScore == 5) {
-        if (playerScore == 5) {
-            console.log("You have beaten the computer!")
-        } else if (computerScore == 5) {
-            console.log("You lost to the computer. Yikes")
-        }
-        break;
-    }
-}
+//     while (playerScore == 5 || computerScore == 5) {
+//         if (playerScore == 5) {
+//             console.log("You have beaten the computer!")
+//         } else if (computerScore == 5) {
+//             console.log("You lost to the computer. Yikes")
+//         }
+//         break;
+//     }
+// }
 
-game()
+// game()
+
+// =================================
+// UI STUFF
+// =================================
+
+// === Scores ===
+let results = document.querySelector(".results");
+let playerResult = document.createElement("div");
+let computerResult = document.createElement("div");
+
+playerResult.className = "player-result";
+computerResult.className = "computer-result";
+
+playerResult.textContent = `Player: ${playerScore}`
+computerResult.textContent = `Computer: ${computerScore}`
+
+results.appendChild(playerResult)
+results.appendChild(computerResult)
