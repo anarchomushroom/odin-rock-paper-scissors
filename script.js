@@ -1,6 +1,11 @@
 // global variables
 let playerScore = 0
 let computerScore = 0
+let results = document.querySelector(".results");
+let playerResult = document.createElement("div");
+let computerResult = document.createElement("div");
+let selections = document.querySelectorAll(".selection");
+
 
 // computer selection
 function getComputerChoice() {
@@ -42,31 +47,11 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// play a full match
-// function game() {
-//     while (playerScore < 5 && computerScore < 5) {
-//         let computerSelection = getComputerChoice();
-//         playRound(computerSelection)
-//     }
-
-//     while (playerScore == 5 || computerScore == 5) {
-//         if (playerScore == 5) {
-//             console.log("You have beaten the computer!")
-//         } else if (computerScore == 5) {
-//             console.log("You lost to the computer. Yikes")
-//         }
-//         break;
-//     }
-// }
-
-// game()
-
 // =================================
 // UI STUFF
 // =================================
 
 // === Buttons ===
-let selections = document.querySelectorAll(".selection");
 selections.forEach(button => {
     button.addEventListener("click", () => {
         playRound(button.value, getComputerChoice());
@@ -76,10 +61,6 @@ selections.forEach(button => {
 })
 
 // === Scores ===
-let results = document.querySelector(".results");
-let playerResult = document.createElement("div");
-let computerResult = document.createElement("div");
-
 playerResult.className = "player-result";
 computerResult.className = "computer-result";
 
