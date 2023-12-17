@@ -58,6 +58,14 @@ selections.forEach(button => {
         playRound(button.value, getComputerChoice());
         playerResult.textContent = `Player: ${playerScore}`
         computerResult.textContent = `Computer: ${computerScore}`
+
+        if (playerScore == 5 ) {
+            announcement.textContent = "You have beaten the computer!"
+            selections.forEach(e => e.remove())
+        } else if (computerScore == 5) {
+            announcement.textContent = "You lost to a computer...yeesh"
+            selections.forEach(e => e.remove())
+        }
     })
 })
 
