@@ -9,8 +9,7 @@ function getComputerChoice() {
 }
 
 // play a round of rps
-function playRound(computerSelection) {
-    let playerSelection = prompt("Choose rock, paper, or scissors.").toLowerCase();
+function playRound(playerSelection, computerSelection) {
     // playerSelection = "rock"
     if (playerSelection == "rock" && computerSelection == "rock") {
         console.log("You both picked rock, try again!")
@@ -65,6 +64,16 @@ function playRound(computerSelection) {
 // =================================
 // UI STUFF
 // =================================
+
+// === Buttons ===
+let selections = document.querySelectorAll(".selection");
+selections.forEach(button => {
+    button.addEventListener("click", () => {
+        playRound(button.value, getComputerChoice());
+        playerResult.textContent = `Player: ${playerScore}`
+        computerResult.textContent = `Computer: ${computerScore}`
+    })
+})
 
 // === Scores ===
 let results = document.querySelector(".results");
